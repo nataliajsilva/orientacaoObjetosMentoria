@@ -1,0 +1,31 @@
+package com.mercadolibre.mentoria.poo.ecommerce;
+
+public enum Estado {
+    Acre,
+    Alagoas,
+    Amapa,
+    Amazonas,
+    Bahia,
+    Ceara,
+    EspiritoSanto,
+    Goias,
+    Maranhao,
+    MatoGrosso,
+    MatoGrossoDoSul,
+    MinasGerais,
+    Para,
+    Paraiba,
+    Parana,
+    Pernambuco,
+    Piaui,
+    RiodeJaneiro,
+    RioGrandedoNorte,
+    RioGrandeDoSul,
+    Rondonia,
+    Roraima,
+    SantaCatarina,
+    SaoPaulo,
+    Sergipe,
+    Tocantins,
+    DistritoFederal
+}

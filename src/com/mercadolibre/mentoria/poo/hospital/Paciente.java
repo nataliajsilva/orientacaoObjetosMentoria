@@ -1,18 +1,20 @@
-package com.mercadolibre.mentoria.poo.escola;
+package com.mercadolibre.mentoria.poo.hospital;
+
+import java.time.LocalDate;
 
 import static com.mercadolibre.mentoria.poo.compartilhado.ValidaorDocumento.isValid;
 
-public class Aluno {
+public class Paciente {
 
     //Propriedades
     private String nome;
     private String documentoCpf;
-    public Turma turma;
-    public GrauEnsino grauEnsino;
+    public LocalDate dataNascimento;
+    public Sexo sexo;
+    public TipoSanguineo tipoSanguineo;
 
-    //construtor
-
-    public Aluno(String documentoCpf, String nome) {
+    //Contrutor
+    public Paciente(String documentoCpf, String nome) {
 
         if (isValid(documentoCpf) == false){
 
@@ -24,9 +26,8 @@ public class Aluno {
             System.out.println("CPF é válido.");
         }
     }
+    //Metódos
+    public String getDocumentoPaciente() { return documentoCpf; }
 
-    //metódos
-    public String getDocumentoAluno() { return documentoCpf; }
-
-    public String getNomeAluno() { return nome; }
+    public String getNomePaciente() { return nome; }
 }

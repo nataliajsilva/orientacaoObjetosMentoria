@@ -1,16 +1,28 @@
 package com.mercadolibre.mentoria.poo.escola;
 
+import static com.mercadolibre.mentoria.poo.compartilhado.ValidaorDocumento.isValid;
+
 public class Professor {
 
     //Propriedades
-    public String nome;
-    private long documento;
+    private String nome;
+    private String documentoCpf;
 
-    //Metódos
-    public Long getDocumentoProfessor() { return documento; }
+    //Contrutor
+    public Professor(String documentoCpf, String nome) {
 
-    public void setDocumentoProfessor(long documento) {
+        if (isValid(documentoCpf) == false){
 
-        this.documento = documento;
+            throw new IllegalArgumentException("CPF não é válido.");
+
+        } else {
+            this.nome = nome;
+            this.documentoCpf = documentoCpf;
+            System.out.println("CPF é válido.");
+        }
     }
+    //Metódos
+    public String getDocumentoProfessor() { return documentoCpf; }
+
+    public String getNomeProfessor() { return nome; }
 }
